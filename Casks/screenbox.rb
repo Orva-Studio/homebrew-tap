@@ -1,6 +1,6 @@
 cask "screenbox" do
-  version "1.3.0"
-  sha256 "289aa0fa22c71cae3db09fd50f107b5cb2542ad1eaf251204ad1710a0296d2fd"
+  version "1.3.1"
+  sha256 "269e7f682005eeb784db1b1a44dbdd99a82706a603cbb995144c1ce59a889838"
 
   url "https://github.com/Orva-Studio/screenbox/releases/download/v#{version}/ScreenBox-#{version}.zip",
       verified: "github.com/Orva-Studio/screenbox/"
