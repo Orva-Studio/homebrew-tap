@@ -18,12 +18,8 @@ cask "screenbox" do
   app "ScreenBox.app"
 
   caveats <<~EOS
-    ScreenBox is ad-hoc signed, so macOS quarantines it on download. Either
-    install with
-
-      brew install --cask --no-quarantine screenbox
-
-    or clear the flag afterwards:
+    ScreenBox is ad-hoc signed, so macOS quarantines it on download. Clear the
+    flag before opening it:
 
       xattr -dr com.apple.quarantine /Applications/ScreenBox.app
 
