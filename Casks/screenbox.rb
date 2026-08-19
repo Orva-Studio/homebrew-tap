@@ -17,13 +17,13 @@ cask "screenbox" do
 
   app "ScreenBox.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                    args: ["-dr", "com.apple.quarantine", "#{appdir}/ScreenBox.app"]
+  end
+
   caveats <<~EOS
-    ScreenBox is ad-hoc signed, so macOS quarantines it on download. Clear the
-    flag before opening it:
-
-      xattr -dr com.apple.quarantine /Applications/ScreenBox.app
-
-    ScreenBox also needs Accessibility permission for its global hotkey:
+    ScreenBox needs Accessibility permission for its global hotkey:
     System Settings -> Privacy & Security -> Accessibility.
   EOS
 
