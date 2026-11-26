@@ -1,11 +1,11 @@
 # Orva Studio Homebrew tap
 
 ```bash
-brew install --cask --no-quarantine Orva-Studio/tap/screenbox
+brew install --cask Orva-Studio/tap/screenbox
 ```
 
-`--no-quarantine` is needed because the apps here are ad-hoc signed rather than
-notarised; without it macOS refuses to open them. See each cask's caveats.
+The apps here are signed with Orva Studio's Developer ID and notarized by Apple,
+so they install and open like any other cask.
 
 ## Casks
 

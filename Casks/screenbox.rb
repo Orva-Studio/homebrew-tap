@@ -17,16 +17,6 @@ cask "screenbox" do
 
   app "ScreenBox.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                    args: ["-dr", "com.apple.quarantine", "#{appdir}/ScreenBox.app"]
-  end
-
-  caveats <<~EOS
-    ScreenBox needs Accessibility permission for its global hotkey:
-    System Settings -> Privacy & Security -> Accessibility.
-  EOS
-
   zap trash: [
     "~/Library/Preferences/local.screenbox.plist",
   ]
